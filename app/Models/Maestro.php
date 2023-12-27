@@ -10,10 +10,10 @@ class Maestro extends Model
 {
     use HasFactory;
 
-    // protected $table = 'maestros';
-    // public $fillable = ['clave', 'nombre', 'apellido_paterno', 'apellido_materno', 
-    // 'fecha_nacimiento', 'direccion', 'email', 'especialidad', 'titulacion', 
-    // 'experiencia', 'numero_seguro', 'foto'];
+    protected $table = 'maestros';
+    public $fillable = ['clave', 'nombre_completo', 'genero',
+    'fecha_nacimiento', 'direccion', 'email', 'especialidad',
+    'titulacion', 'experiencia', 'numero_seguro'];
 
     public function cursos(){
         return $this->hasMany(Curso::class);

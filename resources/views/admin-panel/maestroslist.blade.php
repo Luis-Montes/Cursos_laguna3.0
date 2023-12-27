@@ -10,48 +10,43 @@
                     <tr>
                         <th>Clave</th>
                         <th>Nombre</th>
-                        <th>Apellido Paterno</th>
-                        <th>Apellido Materno</th>
+                        <th>Genero</th>
+                        <th>Fecha de nacimiento</th>
                         <th>Dirección</th>
                         <th>Email</th>
                         <th>Especialidad</th>
-                        <th>Experiencia</th>
-                        <th>Experiencia laboral</th>
-                        <th>Fecha de nacimiento</th>
                         <th>Titulación</th>
-                        <th>Acciones</th>
+                        <th>Experiencia</th>
+                        <th>Numero de seguro</th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
                         <th>Clave</th>
                         <th>Nombre</th>
-                        <th>Apellido Paterno</th>
-                        <th>Apellido Materno</th>
+                        <th>Genero</th>
+                        <th>Fecha de nacimiento</th>
                         <th>Dirección</th>
                         <th>Email</th>
                         <th>Especialidad</th>
-                        <th>Experiencia</th>
-                        <th>Experiencia laboral</th>
-                        <th>Fecha de nacimiento</th>
                         <th>Titulación</th>
-                        <th>Acciones</th>
+                        <th>Experiencia</th>
+                        <th>Numero de seguro</th>
                     </tr>
                 </tfoot>
                 <tbody>
                     @foreach ($maestros as $maestro)
                         <tr>
                             <td>{{ $maestro->clave }}</td>
-                            <td>{{ $maestro->nombre }}</td>
-                            <td>{{ $maestro->apellido_paterno }}</td>
-                            <td>{{ $maestro->apellido_materno }}</td>
+                            <td>{{ $maestro->nombre_completo }}</td>
+                            <td>{{ $maestro->genero }}</td>
+                            <td>{{ $maestro->fecha_nacimiento }}</td>
                             <td>{{ $maestro->direccion }}</td>
                             <td>{{ $maestro->email }}</td>
                             <td>{{ $maestro->especialidad }}</td>
-                            <td>{{ $maestro->experiencia }}</td>
-                            <td>{{ $maestro->experiencia_laboral }}</td>
-                            <td>{{ $maestro->fecha_nacimiento }}</td>
                             <td>{{ $maestro->titulacion }}</td>
+                            <td>{{ $maestro->experiencia }}</td>
+                            <td>{{ $maestro->numero_seguro }}</td>
                             <td><button type="button" class="btn btn-success">EDIT</button></td>
                         </tr>
                     @endforeach

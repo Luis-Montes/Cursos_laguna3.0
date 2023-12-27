@@ -11,10 +11,10 @@ class Curso extends Model
     public $timestamps = false;
     use HasFactory;
     protected $table = 'cursos';
-    public $fillable = ['nombre', 'descripcion', 'precio', 'duracion', 'nivel', 'fecha_inicio', 'maestro'];
+    public $fillable = ['nombre_curso', 'descripcion', 'precio', 'duracion', 'nivel', 'fecha_inicio', 'maestro'];
 
     public function maestro(){
-        return $this->belongsTo(Maestro::class, 'maestro', 'clave');
+        return $this->belongsTo(Maestro::class, 'maestros', 'clave');
     }
 
     public function maestros(){

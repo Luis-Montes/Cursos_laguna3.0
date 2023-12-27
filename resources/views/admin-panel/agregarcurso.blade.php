@@ -86,7 +86,7 @@
                   <label for="instructor" class="formbold-form-label"> Instructor </label>
                   <select name="maestro" id="maestro" class="formbold-form-input">
                     @foreach ($maestros as $maestro)
-                        <option value="{{ $maestro->clave }}" data-nombre="{{ $maestro->nombre }}">{{ $maestro->nombre }}</option>
+                        <option value="{{ $maestro->clave }}" data-nombre="{{ $maestro->nombre_completo }}">{{ $maestro->nombre_completo }}</option>
                     @endforeach
                 </select>
               </div>

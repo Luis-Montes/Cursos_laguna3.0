@@ -27,7 +27,7 @@
             <tbody>
                 @foreach ($cursos as $curso)
                     <tr>
-                        <td>{{ $curso->nombre }}</td>
+                        <td>{{ $curso->nombre_curso }}</td>
                         <td>{{ $curso->descripcion }}</td>
                         <td>${{ $curso->precio }}</td>
                         <td>{{ $curso->duracion }}</td>

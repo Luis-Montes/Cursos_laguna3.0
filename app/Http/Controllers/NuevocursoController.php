@@ -16,20 +16,12 @@ class NuevocursoController extends Controller
     }
 
     public function store(Request $request){
-        $this->validate($request, [
-            'nombre' => 'required',
-            'nivel' => 'required',
-            'descripcion' => 'required|max:250',
-            'precio' => 'required',
-            'duracion' => 'required',
-            'fecha_inicio' => 'required'
-
-        ]);
         echo "<pre>";
         var_dump($_POST);
         echo "</pre>";
+
         Curso::create([
-            'nombre' => $request->nombre,
+            'nombre_curso' => $request->nombre_curso,
             'nivel' => $request->nivel,
             'descripcion' => $request->descripcion,
             'duracion' => $request->duracion,
