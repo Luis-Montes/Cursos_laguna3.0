@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Maestro extends Model
 {
+    public $timestamps = false;
     use HasFactory;
-
     protected $table = 'maestros';
     public $fillable = ['clave', 'nombre_completo', 'genero',
     'fecha_nacimiento', 'direccion', 'email', 'especialidad',

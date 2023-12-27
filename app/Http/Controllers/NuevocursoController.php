@@ -16,19 +16,21 @@ class NuevocursoController extends Controller
     }
 
     public function store(Request $request){
-        echo "<pre>";
-        var_dump($_POST);
-        echo "</pre>";
+        // echo "<pre>";
+        // var_dump($_POST);
+        // echo "</pre>";
 
         Curso::create([
-            'nombre_curso' => $request->nombre_curso,
             'nivel' => $request->nivel,
+            'nombre_curso' => $request->nombre_curso,
             'descripcion' => $request->descripcion,
             'duracion' => $request->duracion,
             'precio' => $request->precio,
             'fecha_inicio' => $request->fecha_inicio,
             'maestro' => $request->maestro
         ]);
+
+        return redirect()->route('inicio');
 
         
 

@@ -32,3 +32,4 @@ Route::post('/cursos_formulario', [NuevocursoController::class, 'store']);
 /* RUTAS PARA LOS MAESTROS */
 Route::get('/maestros', [MaestrosController::class, 'index'])->name('maestros');
 Route::get('/maestros_formulario', [NuevomaestroController::class, 'index'])->name('formulario_maestros');
+Route::post('/maestros_formulario', [NuevomaestroController::class, 'store']);

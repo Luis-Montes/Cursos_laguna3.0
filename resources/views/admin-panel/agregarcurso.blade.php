@@ -31,9 +31,9 @@
                   <input
                   required
                   type="text"
-                  name="nombre"
+                  name="nombre_curso"
                   placeholder="Ingresa el título del curso"
-                  id="Inpnombre"
+                  id="nombre_curso"
                   class="formbold-form-input"
                   />
               </div>
@@ -130,6 +130,7 @@
                 </defs>
                 </svg>
             </button>
+            <div id="etiqueta" class="etiqueta">Guardado con exito!</div>
           </div>
       </form>
     </div>
@@ -318,10 +319,22 @@
     .formbold-btn:hover {
       box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
     }
+
+    .etiqueta {
+      display: none;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #f00;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      z-index: 1000;
+    }
   
   </style>
   <script>
-    const Inpnombre = document.getElementById("formulariocursos").value;
 
     const descripcionTextarea = document.getElementById("descripcion");
     const descripcionCharactersCount = document.getElementById("descripcion-character-count")
@@ -388,15 +401,15 @@
           formSubmitBtn.textContent = 'Guardar'
 
         } else if(stepMenuThree.className == 'formbold-step-menu3 active') { 
-          // document.classList.add('active')
-          if (Inpnombre == "") {
-            alert("ALGUNOS CAMPOS SON OBLIGATORIOS");
-            alert("No me importa fracasado")
-            
-          } else {
-            document.getElementById('formulariocursos').submit();
+
+          document.getElementById('formulariocursos').submit();
+          function activarEtiqueta() {
+            var etiqueta = document.getElementById('etiqueta');
+            etiqueta.style.display = 'block';
+            setTimeout(function() {
+              etiqueta.style.display = 'none';
+            }, 2000);
           }
-          
         }
     })
         

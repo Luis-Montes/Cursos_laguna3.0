@@ -11,6 +11,6 @@ class CursosController extends Controller
     public function index(){
         $cursos = Curso::all();
         $maestros = Maestro::all();
-        return view('admin-panel.cursoslist', compact('cursos'));
+        return view('admin-panel.cursoslist', compact('cursos')); 
     }
 }
