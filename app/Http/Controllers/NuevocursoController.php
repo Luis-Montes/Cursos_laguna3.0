@@ -30,7 +30,7 @@ class NuevocursoController extends Controller
             'maestro' => $request->maestro
         ]);
 
-        return redirect()->route('inicio');
+        return redirect()->route('cursos');
 
         
 

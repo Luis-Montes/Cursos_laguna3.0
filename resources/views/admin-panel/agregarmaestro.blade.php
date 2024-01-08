@@ -36,6 +36,8 @@
               value="<?php echo $claveUnica ?>"
               class="formbold-form-input"
             />
+            
+            
         </div>
 
         <div class="formbold-input-wrapp formbold-mb-3">
@@ -43,6 +45,7 @@
 
           <div>
             <input
+              required
               type="text"
               name="nombre_completo"
               id="nombre_completo"
@@ -54,22 +57,23 @@
   
         <div class="formbold-mb-3">
           <label for="fecha_nacimiento" class="formbold-form-label"> Fecha de Nacimiento </label>
-          <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="formbold-form-input" />
+          <input required type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="formbold-form-input" />
         </div>
   
         <div class="formbold-mb-3">
           <label class="formbold-form-label">Genero</label>
   
           <select class="formbold-form-input" name="genero" id="genero">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="others">Others</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Otros">32 tipos de gays</option>
           </select>
         </div>
   
         <div class="formbold-mb-3">
           <label for="email" class="formbold-form-label"> Email </label>
           <input
+            required
             type="email"
             name="email"
             id="email"
@@ -79,41 +83,34 @@
         </div>
   
         <div class="formbold-mb-3">
-          <label for="address" class="formbold-form-label"> Dirección </label>
+          <label for="direccion" class="formbold-form-label"> Dirección </label>
   
           <input
+            required
             type="text"
-            name="address"
-            id="address"
-            placeholder="Street address"
+            name="direccion"
+            id="direccion"
             class="formbold-form-input formbold-mb-3"
-          />
-          <input
-            type="text"
-            name="address2"
-            id="address2"
-            placeholder="Street address line 2"
-            class="formbold-form-input"
           />
         </div>
   
         <div class="formbold-mb-3 formbold-input-wrapp">
           <label for="phone" class="formbold-form-label"> Telefono </label>
   
-          <div>
+          <div> 
             <input
               type="text"
-              name="areacode"
-              id="areacode"
-              placeholder="Area code"
+              name="extencion"
+              id="extencion"
+              placeholder="Lada"
               class="formbold-form-input formbold-w-45"
             />
   
             <input
               type="text"
-              name="phone"
-              id="phone"
-              placeholder="Phone number"
+              name="telefono"
+              id="telefono"
+              placeholder="Numero de telefono"
               class="formbold-form-input"
             />
           </div>
@@ -124,18 +121,18 @@
             <label for="post" class="formbold-form-label"> Codigo Postal </label>
             <input
               type="text"
-              name="post"
-              id="post"
+              name="codigo_postal"
+              id="codigo_postal"
               placeholder="ex:8976"
               class="formbold-form-input"
             />
           </div>
           <div>
-            <label for="city" class="formbold-form-label"> Ciudad </label>
+            <label for="city" class="formbold-form-label"> Localidad </label>
             <input
               type="text"
-              name="city"
-              id="city"
+              name="ciudad"
+              id="ciudad"
               placeholder="ex: New York"
               class="formbold-form-input"
             />

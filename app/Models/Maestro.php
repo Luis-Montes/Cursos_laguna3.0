@@ -13,7 +13,7 @@ class Maestro extends Model
     protected $table = 'maestros';
     public $fillable = ['clave', 'nombre_completo', 'genero',
     'fecha_nacimiento', 'direccion', 'email', 'especialidad',
-    'titulacion', 'experiencia', 'numero_seguro'];
+    'titulacion', 'experiencia', 'numero_seguro', 'telefono', 'extencion', 'codigo_postal', 'ciudad'];
 
     public function cursos(){
         return $this->hasMany(Curso::class);

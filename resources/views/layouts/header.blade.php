@@ -53,6 +53,7 @@
           <li><a href="index.html#hero" class="active">Inicio</a></li>
           <li><a href="index.html#about">Acerca de nosotros</a></li>
           {{-- <li><a href="index.html#services">Servicios</a></li> --}}
+          <li><a href="{{ route('registromhome') }}">Enseña con nosotros</a></li>
           <li><a href="index.html#portfolio">Lista de cursos</a></li>
           {{-- <li class="dropdown has-dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down"></i></a>
             <ul class="dd-box-shadow">
@@ -77,35 +78,10 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav><!-- End Nav Menu -->
 
-      <a class="btn-getstarted" href="index.html#about">Iniciar Sesión</a>
+      <a class="btn-getstarted" href="{{route('login')}}">Iniciar Sesión</a>
 
     </div>
-  </header><!-- End Header -->
-  <section class="hero" id="hero">
-  
-
-    <video autoplay loop muted>
-      <source src="{{ asset('video/The River (Loop Animation).mp4') }}" type="video/mp4">
-    </video>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10">
-          <h2 data-aos="fade-up" data-aos-delay="100">Bienvenido a Cursos Laguna</h2>
-          <p data-aos="fade-up" data-aos-delay="200">Certifícate y valida tus conocimientos</p>
-        </div>
-        <div class="col-lg-5">
-          <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
-            <input type="text" class="form-control">
-            <input type="submit" class="btn btn-primary" value="Buscar">
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-    
+  </header><!-- End Header -->    
       <!-- Scroll Top Button -->
       <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

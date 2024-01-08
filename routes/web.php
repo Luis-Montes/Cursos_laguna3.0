@@ -6,6 +6,7 @@ use App\Http\Controllers\CursosController;
 use App\Http\Controllers\MaestrosController;
 use App\Http\Controllers\NuevocursoController;
 use App\Http\Controllers\NuevomaestroController;
+use App\Http\Controllers\RegistroMController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +19,21 @@ use App\Http\Controllers\NuevomaestroController;
 |
 */
 
+/* VISTAS INICIALES*/
+Route::get('/', function () {
+    return view('home');
+})->name('inicio');
+
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
+Route::get('/Registro-Instructor', [RegistroMController::class, 'index'])->name('registromhome');
+
+/* PANEL DE ADMINSTRADOR */
 Route::get('/admin', function () {
     return view('admin-panel.adminpanle');
-})->name('inicio');
+})->name('admin');
 
 /* RUTAS PARA LOS CURSOS */
 Route::get('/cursos', [CursosController::class, 'index'])->name('cursos');
