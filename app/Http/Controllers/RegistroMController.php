@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class RegistroMController extends Controller
 {
     public function index(){
-        return view('registromaestro');
+        return view('home_maestro');
     }
 }
